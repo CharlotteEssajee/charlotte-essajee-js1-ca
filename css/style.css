@@ -24,9 +24,10 @@ li :hover {
   text-decoration: underline;
 }
 
-h1 {
+.headline {
   font-size: 3rem;
   text-align: center;
+  margin: 60px 0;
 }
 
 .result {
@@ -67,6 +68,19 @@ h1 {
     transform: rotate(360deg);
   }
 }
+
+/* details */
+.born,
+.playedBy {
+  text-align: center;
+  font-weight: lighter;
+}
+
+.born {
+  font-size: 20px;
+}
+
+.playedBy 
 
 /* contact */
 .contact {

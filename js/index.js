@@ -1,2 +1,3 @@
-const URL = "https://dog.ceo/api/breeds/list/all";
-const resultsContainer = document.querySelector(".results");
+const url = "https://anapioficeandfire.com/api/characters";
+const proxy = "https://noroffcors.herokuapp.com/";
+const corsFix = proxy + url;
