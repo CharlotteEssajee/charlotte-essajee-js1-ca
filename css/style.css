@@ -91,6 +91,8 @@ li :hover {
   background: white;
   box-shadow: 0 1.4rem 8rem rgb(0 0 0 / 20%);
   border-radius: 1rem;
+  color: inherit;
+  text-decoration: inherit;
 }
 
 .card img {

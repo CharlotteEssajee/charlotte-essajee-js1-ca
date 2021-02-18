@@ -21,13 +21,14 @@ async function getCharacters() {
       const name = character[i].fullName;
       const title = character[i].title;
       const family = character[i].family;
+      const id = character[i].id;
 
-      resultsContainer.innerHTML += `<div class ="card">
+      resultsContainer.innerHTML += `<a href="details.html?id=${id}" class="card">
                                         <img src="${image}" alt="${name}" class="characterImg"/>
                                         <h2>${name}</h2>
                                         <p class="title"> Title: ${title}</p>
                                         <p class="family"> Family: ${family}</p> 
-                                      </div>`;
+                                      </a>`;
     }
   } catch (error) {
     console.log(error);
@@ -36,20 +37,3 @@ async function getCharacters() {
 }
 
 getCharacters();
-
-const select = document.querySelector(".card");
-const characterImg = document.querySelector(".characterImg");
-
-select.addEventListener("change", getDetails);
-
-function getDetails(event) {
-  console.log(event.target.value);
-
-  const amount = event.target.value;
-
-  characterImg.innerHTML = "";
-
-  for (let i = 0; i <= amount; i++) {
-    characterImg.innerHTML += `<a href="details.html?id=${i}">${i}</a>`;
-  }
-}
