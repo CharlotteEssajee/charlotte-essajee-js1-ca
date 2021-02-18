@@ -31,6 +31,6 @@ getId();
 
 function createHTML(details) {
   getDetails.innerHTML = `<h1 class="headline">Name: ${details.name}<h1>
-                            <div class="born">Born: ${details.born}<div>
-                            <div class="playedBy">Actress: ${details.playedBy}<div>`;
+                            <div class="house">House: ${details.house}<div>
+                            <div class="ancestry">ancestry: ${details.ancestry}<div>`;
 }
