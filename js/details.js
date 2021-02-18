@@ -8,7 +8,7 @@ if (id === null) {
   location.href = "/";
 }
 
-const url = "https://thronesapi.com/api/v2/Characters";
+const url = "https://thronesapi.com/api/v2/Characters/";
 const proxy = "https://noroffcors.herokuapp.com/";
 const corsFix = proxy + url + id;
 
