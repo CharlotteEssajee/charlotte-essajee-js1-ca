@@ -1,9 +1,11 @@
-const url = "http://hp-api.herokuapp.com/api/characters";
+const url = "https://thronesapi.com/api/v2/Characters";
+const proxy = "https://noroffcors.herokuapp.com/";
+const corsFix = proxy + url;
 const resultsContainer = document.querySelector(".results");
 
 async function getCharacters() {
   try {
-    const response = await fetch(url);
+    const response = await fetch(corsFix);
     const json = await response.json();
 
     const character = json;
@@ -15,15 +17,16 @@ async function getCharacters() {
         break;
       }
 
-      const image = character[i].image;
-      const name = character[i].name;
-      const actor = character[i].actor;
-      const house = character[i].house;
+      const image = character[i].imageUrl;
+      const name = character[i].fullName;
+      const title = character[i].title;
+      const family = character[i].family;
 
       resultsContainer.innerHTML += `<div class ="card">
                                         <img src="${image}" alt="${name}" class="characterImg"/>
                                         <h2>${name}</h2>
-                                        <p class="house"> House: ${house}</p> 
+                                        <p class="title"> House: ${title}</p>
+                                        <p class="family"> Family: ${family}</p> 
                                       </div>`;
     }
   } catch (error) {
@@ -46,7 +49,7 @@ function getDetails(event) {
 
   characterImg.innerHTML = "";
 
-  for (let i = 1; i <= amount; i++) {
+  for (let i = 0; i <= amount; i++) {
     characterImg.innerHTML += `<a href="details.html?id=${i}">${i}</a>`;
   }
 }
