@@ -1,24 +1,33 @@
-const url = "https://anapioficeandfire.com/api/characters/583";
-const proxy = "https://noroffcors.herokuapp.com/";
-const corsFix = proxy + url;
+const queryString = document.location.search;
 
-const getDetails = document.querySelector(".details");
+const params = new URLSearchParams(queryString);
 
-async function getCharacter() {
+const id = params.get("id");
+
+if (id === null) {
+  location.href = "/";
+}
+
+const url = "http://hp-api.herokuapp.com/api/characters/" + id;
+
+const idContainer = document.querySelector(".id");
+const detailContainer = document.querySelector(".details");
+
+idContainer.innerHTML = id;
+
+async function getId() {
   try {
-    const response = await fetch(corsFix);
+    const response = await fetch(url);
     const details = await response.json();
 
-    createHTML(details);
-  } catch (error) {
+    console.log(details);
+  } catch {
     console.log(error);
-    getDetails.innerHTML = error;
-  } finally {
-    console.log("this code will run no matter what");
+    detailContainer.innerHTML = error;
   }
 }
 
-getCharacter();
+getId();
 
 function createHTML(details) {
   getDetails.innerHTML = `<h1 class="headline">Name: ${details.name}<h1>

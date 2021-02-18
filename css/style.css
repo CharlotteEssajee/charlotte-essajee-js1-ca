@@ -1,10 +1,26 @@
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
 /* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 30px;
   justify-content: center;
   display: flex;
+  background-color: black;
 }
 
 li {
@@ -16,18 +32,12 @@ li a {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: white;
   text-transform: uppercase;
 }
 
 li :hover {
   text-decoration: underline;
-}
-
-.headline {
-  font-size: 3rem;
-  text-align: center;
-  margin: 60px 0;
 }
 
 .result {
@@ -69,29 +79,68 @@ li :hover {
   }
 }
 
+/* index */
+.container {
+  margin-top: 9rem;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 200px;
+  background: white;
+  box-shadow: 0 1.4rem 8rem rgb(0 0 0 / 20%);
+  border-radius: 1rem;
+}
+
+.card img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.house {
+  margin: 0.5rem 0;
+  font-size: 0.7rem;
+  font-weight: bolder;
+}
+
 /* details */
-.born,
-.playedBy {
-  text-align: center;
-  font-weight: lighter;
-}
-
-.born {
-  font-size: 20px;
-}
-
-.playedBy 
 
 /* contact */
+.headline {
+  font-size: 3rem;
+  text-align: center;
+  margin: 9rem 0 10px 0;
+  text-transform: uppercase;
+}
+
+.subhead {
+  text-align: center;
+}
+
 .contact {
   max-width: 600px;
   margin: auto;
+  display: block;
+  text-align: center;
 }
 
 form {
-  padding: 2em;
-  background: white;
+  padding: 1em;
   border-radius: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 input {
