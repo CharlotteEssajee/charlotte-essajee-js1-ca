@@ -25,7 +25,7 @@ async function getCharacters() {
       resultsContainer.innerHTML += `<div class ="card">
                                         <img src="${image}" alt="${name}" class="characterImg"/>
                                         <h2>${name}</h2>
-                                        <p class="title"> House: ${title}</p>
+                                        <p class="title"> Title: ${title}</p>
                                         <p class="family"> Family: ${family}</p> 
                                       </div>`;
     }

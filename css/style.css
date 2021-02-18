@@ -108,7 +108,11 @@ h2 {
   text-transform: uppercase;
 }
 
-.house {
+.title {
+  font-size: 1rem;
+}
+
+.family {
   margin: 0.5rem 0;
   font-size: 0.7rem;
   font-weight: bolder;

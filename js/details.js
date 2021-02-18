@@ -8,7 +8,9 @@ if (id === null) {
   location.href = "/";
 }
 
-const url = "http://hp-api.herokuapp.com/api/characters/" + id;
+const url = "https://thronesapi.com/api/v2/Characters";
+const proxy = "https://noroffcors.herokuapp.com/";
+const corsFix = proxy + url + id;
 
 const idContainer = document.querySelector(".id");
 const detailContainer = document.querySelector(".details");
@@ -30,7 +32,10 @@ async function getId() {
 getId();
 
 function createHTML(details) {
-  getDetails.innerHTML = `<h1 class="headline">Name: ${details.name}<h1>
-                            <div class="house">House: ${details.house}<div>
-                            <div class="ancestry">ancestry: ${details.ancestry}<div>`;
+  getDetails.innerHTML = `<div class ="card">
+                            <img src="${image}" alt="${name}" class="characterImg"/>
+                            <h2>${name}</h2>
+                            <p class="title"> Title: ${title}</p>
+                            <p class="family"> Family: ${family}</p> 
+                          </div>`;
 }
