@@ -1,18 +1,16 @@
 # charlotte-essajee-js1-ca
 
 1. Find an API
-   Search for a public, free-to-use API.
-
-   You will need to make two calls to this API:
-   to fetch an array of results
+Search for a public, free-to-use API.
+You will need to make two calls to this API:
+to fetch an array of results
    to fetch a single result using an id, name, or other property.
    You will need to read the API's documentation to see what URLs are available, if they require a key to be sent in the header, and any other configuration they might need.
 
    There are many free APIs discoverable by a Google search.
    You may not use the APIs used in the lessons.
 
-2. Styling
-   The focus of the CA is on JavaScript, not styling. Yet, as a front-end developer you will always need to produce user-interfaces that make sense and are easy to follow. You will need to provide navigation to and from the home page (index.html) and the contact page.
+2. The focus of the CA is on JavaScript, not styling. Yet, as a front-end developer you will always need to produce user-interfaces that make sense and are easy to follow. You will need to provide navigation to and from the home page (index.html) and the contact page.
 
    Both API calls should include a loading indicator.
 
