@@ -1,6 +1,6 @@
-# charlotte-essajee-js1-ca
+# Charlotte-essajee-js1-ca
 
-1. Find an API
+### 1. Find an API
 
 Search for a public, free-to-use API. You will need to make two calls to this API:
 to fetch an array of results to fetch a single result using an id, name, or other property. You will need to read the API's documentation to see what URLs are available, if they require a key to be sent in the header, and any other configuration they might need.
